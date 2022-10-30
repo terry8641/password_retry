@@ -8,9 +8,12 @@ password = 'a123456'
 N = 2
 while N >= 0:
 	password2 = input('請輸入密碼: ')
-	if password == password2:
+	if password2 == password:
 		print('登入成功')
-		break
+		break #逃出迴圈
 	else:
-		print('密碼錯誤! 還有', N,'次機會')
+		if N > 0:
+			print('密碼錯誤! 還有', N,'次機會')
+		else:
+			print('沒機會，要鎖帳號了')
 		N = N-1
